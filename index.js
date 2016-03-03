@@ -1,10 +1,9 @@
 var http = require("http");
-http.set('port', (process.env.PORT || 5000));
-http.get('/',function(request,response){
-	response.writeHead(200, {'Content-Type': 'text/plain'});
-   	response.end('venkatesh\nSathish');
-});
+http.createServer(function (request, response) {
 
-http.listen(http.get('port'), function() {
-  console.log('Node http is running on port', http.get('port'));
-});
+ //  response.writeHead(200, {'Content-Type': 'text/plain'});
+   response.end('venkatesh\nSathish');
+	console.log("hi");
+}).listen(8085);
+
+console.log('Server running at http://127.0.0.1:8081/');
